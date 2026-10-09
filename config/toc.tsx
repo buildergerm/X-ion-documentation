@@ -17,17 +17,17 @@ type TocData = {
 export const TocData: TocData = {
   'getting-started/introduction': [
     {
-      title: 'Welcome to Pinexio',
-      href: '/docs/getting-started/introduction#welcome-to-pinexio',
+      title: 'Welcome to Scrutium',
+      href: '/docs/getting-started/introduction#welcome-to-scrutium',
       pages: [
         {
-          title: 'Why Choose Pinexio',
-          href: '/docs/getting-started/introduction#why-choose-pinexio',
+          title: 'Why Choose Scrutium',
+          href: '/docs/getting-started/introduction#why-choose-scrutium',
         },
 
         {
-          title: 'What Makes Pinexio Special',
-          href: '/docs/getting-started/introduction#what-makes-pinexio-special',
+          title: 'What Makes Scrutium Special',
+          href: '/docs/getting-started/introduction#what-makes-scrutium-special',
         },
       ],
     },

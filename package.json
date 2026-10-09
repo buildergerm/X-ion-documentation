@@ -5,7 +5,7 @@
   "author": "Sanjay Rajeev",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sanjayc208/pinexio/issues"
+    "url": "https://github.com/scrutium/scrutium/issues"
   },
   "scripts": {
     "dev": "next dev",

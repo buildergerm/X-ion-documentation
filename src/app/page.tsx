@@ -21,9 +21,7 @@ export default function Home() {
           <div className="flex-1 flex gap-2 justify-end">
             <ModeToggle />
             <Button
-              onClick={() =>
-                router.push('https://github.com/sanjayc208/pinexio')
-              }
+              onClick={() => router.push('https://github.com/scrutium/scrutium')}
             >
               <Github className="h-[1.2rem] w-[1.2rem] transition-all" />
             </Button>
@@ -55,7 +53,7 @@ export default function Home() {
                 src={`/logos/pinedocs.png`}
               />
               <h1 className="text-5xl content-center md:text-7xl font-stretch-110% -tracking-tighter text-gray-900 dark:text-white">
-                PINE<span className="md:text-8xl">X</span>IO
+                SCRUTIUM
               </h1>
             </motion.div>
             <motion.p
@@ -64,9 +62,9 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-shadow-xs mt-6 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
             >
-              A customizable open-source documentation template built with
-              Next.js 15, Tailwind CSS 4, and Contentlayer for beautiful, fast,
-              and flexible documentation.
+              A modern open-source documentation platform built with Next.js 15,
+              Tailwind CSS 4, and Contentlayer for beautiful, fast, and
+              flexible knowledge delivery.
             </motion.p>
           </div>
 
@@ -89,9 +87,7 @@ export default function Home() {
               className="px-6 py-3 gap-2"
               variant={'outline'}
               size={'md'}
-              onClick={() =>
-                router.push('https://github.com/sanjayc208/pinexio')
-              }
+              onClick={() => router.push('https://github.com/scrutium/scrutium')}
             >
               <Github size={20} />
               GitHub
@@ -148,7 +144,7 @@ export default function Home() {
               className="px-4 py-2 text-sm font-medium gap-2"
               onClick={() =>
                 window.open(
-                  'https://vercel.com/new/clone?repository-url=https://github.com/sanjayc208/pinexio',
+                  'https://vercel.com/new/clone?repository-url=https://github.com/scrutium/scrutium',
                   '_blank'
                 )
               }
