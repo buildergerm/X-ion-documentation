@@ -23,23 +23,17 @@ import {
   NestedLink,
 } from '@/components/sidebar';
 import { Github } from 'lucide-react';
-import { useRouter } from 'next/navigation';
 
 import Header from '@/components/header';
 import { ModeToggle } from '@/components/mode-toggle';
 import { Button } from '@/components/button';
 import { useIsMobile } from '@/hooks/use-mobile';
 
-type SidebarSection = (typeof sidebarNav)[number] & {
-  href?: string;
-};
-
 export default function DocsLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const router = useRouter();
   const isMobile = useIsMobile();
 
   return (
@@ -69,16 +63,15 @@ export default function DocsLayout({
             </Link>
           </SidebarHeader>
           <SidebarContent>
-            {(sidebarNav as SidebarSection[]).map((section) => (
+            {sidebarNav.map((section) => (
               <SidebarMenuItem
-                isCollapsable={!!(section.pages && section.pages.length > 0)}
+                isCollapsable={section.pages.length > 0}
                 key={section.title}
                 label={section.title}
-                href={section.href}
                 icon={section.icon}
                 defaultOpen={section.defaultOpen}
               >
-                {section.pages?.map((page) => (
+                {section.pages.map((page) => (
                   <NestedLink key={page.href} href={page.href}>
                     {page.title}
                   </NestedLink>
