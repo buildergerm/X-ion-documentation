@@ -1,0 +1,40 @@
+---
+title: 'Database migrations'
+description: 'Important Supabase tables for Scrutium features.'
+date: 2026-10-11
+---
+
+# Database migrations
+
+Apply SQL in the Supabase SQL editor (or your migration pipeline) before relying on a feature in production.
+
+## Memory
+
+```sql
+CREATE TABLE IF NOT EXISTS user_memories (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  content TEXT NOT NULL,
+  category TEXT NOT NULL DEFAULT 'general',
+  source_chat_id UUID REFERENCES chats(id) ON DELETE SET NULL,
+  importance SMALLINT NOT NULL DEFAULT 1 CHECK (importance BETWEEN 1 AND 5),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+ALTER TABLE user_preferences
+  ADD COLUMN IF NOT EXISTS memory_enabled BOOLEAN DEFAULT TRUE;
+
+ALTER TABLE user_memories ENABLE ROW LEVEL SECURITY;
+-- Add SELECT/INSERT/UPDATE/DELETE policies for auth.uid() = user_id
+```
+
+## Age & parental
+
+Ensure `users` includes age fields (`date_of_birth`, `age_verified_at`, `age_eligible`, `access_status`, …) and parental tables if those features are enabled.
+
+## Always
+
+- Enable RLS  
+- Test with a real signed-in user  
+- Regenerate TypeScript DB types when tables change  

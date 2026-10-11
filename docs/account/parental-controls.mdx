@@ -1,0 +1,28 @@
+---
+title: 'Parental controls'
+description: 'Age-based access and guardian supervision.'
+date: 2026-10-11
+---
+
+# Parental controls
+
+Scrutium supports **age-based access states** and optional guardian supervision where policy and law allow.
+
+## Access states (conceptual)
+
+- Age eligible  
+- Parental consent required  
+- Parental consent pending  
+- Parent / guardian verified  
+- Restricted account  
+- Suspended account  
+
+Parental consent is **not** a way to bypass a hard legal minimum age. If someone is below the product minimum, access stays blocked.
+
+## Supervised access
+
+Where allowed, guardians can link, approve, or revoke consent. Server-side checks prevent bypass via local storage or forged API calls.
+
+## Configuration
+
+Minimum age and feature flags are deployment configuration — document your approved policy before enabling supervised flows in production.

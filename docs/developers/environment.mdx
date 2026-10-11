@@ -1,0 +1,30 @@
+---
+title: 'Environment variables'
+description: 'Key env vars for Scrutium app deployments.'
+date: 2026-10-11
+---
+
+# Environment variables
+
+Exact names may vary by version; treat this as a checklist.
+
+## Core
+
+- `NEXT_PUBLIC_SUPABASE_URL`  
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY`  
+- `SUPABASE_SERVICE_ROLE_KEY` (server only)  
+
+## Models / providers
+
+- Provider API keys as required by your model map (e.g. OpenRouter / Axoid-style keys referenced in chat route)  
+
+## Search & live tools
+
+- `FIRECRAWL_API_KEY` or `TAVILY_API_KEY` for web search  
+- Live weather / places / crypto often use public endpoints; no key required for basic setups  
+
+## Optional
+
+- Analytics, email, and connector secrets as you enable features  
+
+Never commit secrets. Use Vercel env or a secrets manager.

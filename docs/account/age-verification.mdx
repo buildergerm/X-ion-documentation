@@ -1,0 +1,28 @@
+---
+title: 'Age verification'
+description: 'Date of birth and eligibility before AI chat.'
+date: 2026-10-11
+---
+
+# Age verification
+
+New users complete a **date-of-birth** step before full access to AI chat. This is enforced on the server, not only in the browser.
+
+## What you enter
+
+Day, month, and year. Scrutium rejects invalid dates and future dates, and calculates age correctly around birthdays.
+
+## Outcomes
+
+- **Eligible** — continue onboarding and use the product  
+- **Not eligible** — access to restricted features is blocked with a clear explanation  
+
+Minimum age is **configurable** by policy for your deployment — it is not hard-coded in client UI alone.
+
+## Existing users
+
+Accounts that predate the feature may see a modal after deploy until verification is completed.
+
+## Related
+
+- [Parental controls](/docs/account/parental-controls)  

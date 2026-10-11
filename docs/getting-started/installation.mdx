@@ -1,154 +1,39 @@
 ---
-title: Installation
-description: A guide to install Scrutium locally to your system and get it running
-date: 2025-03-12
+title: 'Installation'
+description: 'For developers: run the docs site or the Scrutium app locally.'
+date: 2026-10-11
 ---
 
-# Installation Guide
+# Installation
 
-Welcome to the installation guide for forking the application from GitHub and setting up your development environment!
+There are two codebases:
 
-<Steps>
-  <Step>
-    <StepTitle>Step 1: Fork the Repository</StepTitle>
-    <StepContent>
-    <div>
-      <div>
-        Visit our GitHub repository and click the "Fork" button to create your own copy.
-      </div>
-        <a
-          href="https://github.com/scrutium/scrutium"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Fork the Repository on GitHub
-        </a>
-      </div>
-    </StepContent>
-  </Step>
-  <Step>
-    <StepTitle>Step 2: Clone Your Fork</StepTitle>
-    <StepContent>
-    <div>
-      After forking, clone your repository to your local machine:
-  ```sh
-  git clone https://github.com/scrutium/scrutium.git
-  ```
-      </div>
-    </StepContent>
-  </Step>
-  <Step>
-    <StepTitle>Step 3: Install Dependencies</StepTitle>
-    <StepContent>
-    <div>
-      Install the project dependencies using your preferred package manager:
-       <CodeTabs tabs={{
-        'npm':{
-          syntax:'npm i'
-        },
-        'pnpm':{
-          syntax:'pnpm i'
-        },
-        'yarn':{
-          syntax:'yarn i'
-        },
-       }} />
-      </div>
-    </StepContent>
-  </Step>
-  <Step>
-    <StepTitle>Step 4: Run the Development Server</StepTitle>
-    <StepContent>
-    <div>
-      Start your development server with one of the following commands:
-      <CodeTabs tabs={{
-        'npm':{
-          syntax:'npm run dev'
-        },
-        'pnpm':{
-          syntax:'pnpm dev'
-        },
-        'yarn':{
-          syntax:'yarn run dev'
-        },
-       }} />
-      </div>
-    </StepContent>
-  </Step>
-  <Step>
-    <StepTitle>Step 5: Make Changes</StepTitle>
-    <StepContent>
-    <div>
-      <p>If you want to make changes:</p>
+1. **Scrutium app** — the AI product users chat with  
+2. **Scrutium documentation** — this MDX docs site  
 
-      1. Edit files in the root directory <code>/</code> for global configurations.
-      2. Update or create MDX files in the <code>docs</code> directory to modify or add documentation.
-      3. Update or create MDX files in the <code>docs</code> directory to modify or add documentation.
-
-          <FolderTree className="overflow-hidden p-2">
-            <Folder element="docs" defaultOpen={true}>
-              <File>
-                <p>page1.mdx</p>
-              </File>
-              <File>
-                <p>page2.mdx</p>
-              </File>
-            </Folder>
-          </FolderTree>
-      4. Refer to the existing documentation to see how things work.
-      </div>
-    </StepContent>
-
-  </Step>
-</Steps>
-
-## What is MDX?
-
-MDX is an extension of Markdown that allows you to write JSX (React components) inside your Markdown files. This means you can mix content with interactive components seamlessly.
-
-For example, in a normal Markdown file, you might write:
-
-```md
-# Welcome to My Docs
-
-This is a simple Markdown page.
-```
-
-But in MDX, you can add React components directly:
-
-```ts
-import { Button } from '@/components/ui/button';
-
-# Welcome to My Docs
-
-This is a simple Markdown page with a button:
-
-<Button>Click Me</Button>
-```
-
-## Creating an MDX File
-
-To add a new documentation page, create a new `.mdx` file inside the `docs` directory:
+## Documentation site (this repo)
 
 ```sh
-echo "# My New Page" > docs/my-new-page.mdx
+git clone https://github.com/buildergerm/scrutium-documentation.git
+cd scrutium-documentation
+pnpm install
+pnpm dev
 ```
 
-This file will automatically be picked up by the system and rendered as a new documentation page.
+Open the local URL Next.js prints (usually `http://localhost:3000`). Edit MDX under `/docs` and navigation in `config/sidebar.tsx`.
 
-Your folder structure should look like this:
+## Scrutium app
 
-<FolderTree className="overflow-hidden p-2">
-  <Folder element="project-root" defaultOpen={true}>
-    <Folder element="docs" defaultOpen={true}>
-      <File>
-        <p>my-new-page.mdx</p>
-      </File>
-      <File>
-        <p>another-page.mdx</p>
-      </File>
-    </Folder>
-  </Folder>
-</FolderTree>
+```sh
+git clone https://github.com/buildergerm/scrutium-artificial-Intelligence.git
+cd scrutium-artificial-Intelligence
+npm install
+# configure .env.local with Supabase + model keys
+npm run dev
+```
 
-🎉 That’s it! You now have a functional documentation site up and running with your first MDX page.
+See [Self-hosting](/docs/developers/self-hosting) and [Environment variables](/docs/developers/environment) for production setup.
+
+## End users
+
+You do **not** need to install anything to use Scrutium. Open the deployed app, sign in, and start chatting — [Quick Start](/docs/getting-started/quick-start).

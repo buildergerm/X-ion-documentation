@@ -1,0 +1,29 @@
+---
+title: 'Self-hosting'
+description: 'Run Scrutium on your own infrastructure.'
+date: 2026-10-11
+---
+
+# Self-hosting
+
+The main application lives in the **scrutium-artificial-Intelligence** repository (Next.js App Router + Supabase).
+
+## High-level steps
+
+1. Clone the app repo  
+2. Create a Supabase project  
+3. Run SQL migrations (users, chats, parental, **user_memories**, etc.)  
+4. Set environment variables  
+5. Deploy to Vercel (or any Node host that supports Next.js)  
+
+## Node version
+
+`package.json` may specify `engines.node` ≥ 22. Match this on CI and locally.
+
+## Auth
+
+Configure Supabase Auth (email, redirect URLs for production).
+
+## Docs site
+
+This documentation site is a separate Next.js + MDX project (`scrutium-documentation`). Deploy it independently if you want a public docs domain.

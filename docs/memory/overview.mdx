@@ -1,0 +1,36 @@
+---
+title: 'How memory works'
+description: 'Durable facts Scrutium remembers across chats.'
+date: 2026-10-11
+---
+
+# Memory
+
+Scrutium can remember **durable facts** about you — preferences, identity details, ongoing projects — and use them in future chats.
+
+## Enable or disable
+
+**Settings → Memory** (also referenced from Privacy).
+
+When memory is off, Scrutium will not load or save memory facts for your account.
+
+## Add memories
+
+1. **Settings → Memory** — type a fact and add it  
+2. **In chat** — say things like “Remember that I prefer TypeScript” — the model may call the **remember** tool  
+
+Memories are stored in `user_memories` (Supabase) with categories such as identity, preference, project, work, or general.
+
+## How it’s used
+
+On each chat request (signed-in, non-Build), Scrutium loads your memories server-side and injects a short block into the system prompt. The model is instructed to use facts when relevant — not to recite the whole list.
+
+## Manage
+
+- Delete individual memories in Settings  
+- **Clear all memories** when you want a reset  
+- Cap applies so old low-priority items can be replaced  
+
+## Privacy
+
+Row-level security ensures you only access your own rows. Memory is account-bound, not shared across users.
