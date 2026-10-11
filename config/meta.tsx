@@ -1,50 +1,47 @@
 export const meta = {
   metadataBase: new URL('https://scrutium.vercel.app'),
-  title: 'Scrutium - Documentation template',
+  title: 'Scrutium Docs — AI chat, projects, memory & more',
   description:
-    'A customizable Open Source documentation template built with Next.js',
-  authors: [{ name: 'Sanjay Rajeev' }],
+    'Official documentation for Scrutium AI by X-ion Team. Learn chat, projects, library, memory, safety, and developer setup.',
+  authors: [{ name: 'X-ion Team' }],
   keywords: [
     'Scrutium',
-    'documentation template',
-    'template',
-    'Next.js',
-    'React',
-    'JavaScript',
+    'Scrutium AI',
+    'X-ion',
+    'AI chat',
+    'documentation',
+    'memory',
+    'projects',
   ],
-  publisher: 'Sanjay Rajeev',
-  creator: 'Sanjay Rajeev',
+  publisher: 'X-ion Team',
+  creator: 'X-ion Team',
   openGraph: {
     type: 'website',
-    title: 'Scrutium - Documentation Template',
+    title: 'Scrutium Docs',
     description:
-      'A customizable open-source documentation template built with Next.js.',
+      'Official documentation for Scrutium AI — private by default, built by X-ion.',
     images: [
       {
         url: '/og_image.png',
         width: 1200,
         height: 630,
-        alt: 'Scrutium Documentation Template',
+        alt: 'Scrutium Documentation',
       },
     ],
   },
   twitter: {
-    card: 'summary_large_image', // Type of Twitter card
-    title: 'Scrutium - Documentation Template', // Twitter card title
+    card: 'summary_large_image',
+    title: 'Scrutium Docs',
     description:
-      'A customizable open-source documentation template built with Next.js.', // Twitter card description
-    images: ['/og_image.png'], // Image used in the Twitter card
-    creator: '@sanjayrajeev', // Twitter handle of the content creator (optional)
+      'Official documentation for Scrutium AI — private by default, built by X-ion.',
+    images: ['/og_image.png'],
+    creator: '@xion',
   },
-  // SEO Enhancements
   alternates: {
-    canonical: 'https://scrutium.vercel.app', // Set the canonical URL
+    canonical: 'https://scrutium.vercel.app',
   },
-  robots: 'index, follow', // Allows search engines to index and follow links
-  // Optional: Hreflang for multilingual content (if applicable)
+  robots: 'index, follow',
   hreflang: {
-    en: 'https://scrutium.vercel.app', // English version URL
-    // Add more hreflang if you have other languages (example: Spanish)
-    // "es": "https://scrutium.vercel.app/es",
+    en: 'https://scrutium.vercel.app',
   },
 };

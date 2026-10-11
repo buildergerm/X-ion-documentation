@@ -1,4 +1,15 @@
-import { Component, Paintbrush, Rocket, Search, Wrench } from 'lucide-react';
+import {
+  BookOpen,
+  Brain,
+  FolderKanban,
+  Library,
+  MessageSquare,
+  Rocket,
+  Settings,
+  Shield,
+  Sparkles,
+  Code2,
+} from 'lucide-react';
 
 export const sidebarNav = [
   {
@@ -11,117 +22,141 @@ export const sidebarNav = [
         href: '/docs/getting-started/introduction',
       },
       {
-        title: 'Installation',
-        href: '/docs/getting-started/installation',
-      },
-      {
         title: 'Quick Start',
         href: '/docs/getting-started/quick-start',
       },
+      {
+        title: 'Sign in & accounts',
+        href: '/docs/getting-started/accounts',
+      },
     ],
   },
   {
-    title: 'Components',
-    icon: <Component className="h-5 w-5" />,
+    title: 'Chat',
+    icon: <MessageSquare className="h-5 w-5" />,
+    defaultOpen: true,
+    pages: [
+      {
+        title: 'Overview',
+        href: '/docs/chat/overview',
+      },
+      {
+        title: 'Models & speed',
+        href: '/docs/chat/models',
+      },
+      {
+        title: 'Tools & live data',
+        href: '/docs/chat/tools',
+      },
+      {
+        title: 'Thinking & activity',
+        href: '/docs/chat/thinking',
+      },
+      {
+        title: 'Action prompts',
+        href: '/docs/chat/action-prompts',
+      },
+    ],
+  },
+  {
+    title: 'Projects & Build',
+    icon: <FolderKanban className="h-5 w-5" />,
+    defaultOpen: true,
+    pages: [
+      {
+        title: 'Projects',
+        href: '/docs/projects/overview',
+      },
+      {
+        title: 'Build mode',
+        href: '/docs/projects/build-mode',
+      },
+    ],
+  },
+  {
+    title: 'Library',
+    icon: <Library className="h-5 w-5" />,
+    defaultOpen: true,
+    pages: [
+      {
+        title: 'Your library',
+        href: '/docs/library/overview',
+      },
+    ],
+  },
+  {
+    title: 'Memory',
+    icon: <Brain className="h-5 w-5" />,
+    defaultOpen: true,
+    pages: [
+      {
+        title: 'How memory works',
+        href: '/docs/memory/overview',
+      },
+    ],
+  },
+  {
+    title: 'Account & safety',
+    icon: <Shield className="h-5 w-5" />,
+    defaultOpen: true,
+    pages: [
+      {
+        title: 'Age verification',
+        href: '/docs/account/age-verification',
+      },
+      {
+        title: 'Parental controls',
+        href: '/docs/account/parental-controls',
+      },
+      {
+        title: 'Settings',
+        href: '/docs/account/settings',
+      },
+      {
+        title: 'Privacy & data',
+        href: '/docs/account/privacy',
+      },
+    ],
+  },
+  {
+    title: 'Personalization',
+    icon: <Sparkles className="h-5 w-5" />,
     defaultOpen: false,
     pages: [
       {
-        title: 'Button',
-        href: '/docs/components/button',
-      },
-      {
-        title: 'Input',
-        href: '/docs/components/input',
-      },
-      {
-        title: 'Label',
-        href: '/docs/components/label',
-      },
-      {
-        title: 'Checkbox',
-        href: '/docs/components/checkbox',
-      },
-      {
-        title: 'Search Button',
-        href: '/docs/components/search-button',
-      },
-      {
-        title: 'Tabs',
-        href: '/docs/components/tabs',
-      },
-      {
-        title: 'Sidebar',
-        href: '/docs/components/sidebar',
-      },
-      {
-        title: 'Steps',
-        href: '/docs/components/steps',
-      },
-      {
-        title: 'Syntax Highlighter',
-        href: '/docs/components/syntax-highlighter',
-      },
-      {
-        title: 'Folder Tree',
-        href: '/docs/components/folder-tree',
-      },
-      {
-        title: 'Note',
-        href: '/docs/components/note',
-      },
-      {
-        title: 'Menu',
-        href: '/docs/components/menu',
-      },
-      {
-        title: 'Popover',
-        href: '/docs/components/popover',
-      },
-      {
-        title: 'Dialog',
-        href: '/docs/components/dialog',
-      },
-      {
-        title: 'Select',
-        href: '/docs/components/select',
+        title: 'Preferences',
+        href: '/docs/personalization/preferences',
       },
     ],
   },
   {
-    title: 'Customization',
-    icon: <Wrench className="h-5 w-5" />,
-    defaultOpen: true,
+    title: 'Developers',
+    icon: <Code2 className="h-5 w-5" />,
+    defaultOpen: false,
     pages: [
       {
-        title: 'Sidebar',
-        href: '/docs/customization/sidebar',
+        title: 'Self-hosting',
+        href: '/docs/developers/self-hosting',
       },
       {
-        title: 'Toc',
-        href: '/docs/customization/toc',
+        title: 'Environment variables',
+        href: '/docs/developers/environment',
       },
       {
-        title: 'Font',
-        href: '/docs/customization/font',
-      },
-      {
-        title: 'SEO and Social Sharing',
-        href: '/docs/customization/seo-and-social-sharing',
+        title: 'Database migrations',
+        href: '/docs/developers/migrations',
       },
     ],
   },
   {
-    title: 'Theme',
-    icon: <Paintbrush className="h-5 w-5" />,
-    defaultOpen: true,
-    href: '/docs/theme',
-    pages: [],
-  },
-  {
-    title: 'Search Bar',
-    icon: <Search className="h-5 w-5" />,
-    defaultOpen: true,
-    href: '/docs/search-bar',
-    pages: [],
+    title: 'About',
+    icon: <BookOpen className="h-5 w-5" />,
+    defaultOpen: false,
+    pages: [
+      {
+        title: 'X-ion Team',
+        href: '/docs/about/x-ion',
+      },
+    ],
   },
 ];

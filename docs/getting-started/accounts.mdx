@@ -1,0 +1,40 @@
+---
+title: 'Sign in & accounts'
+description: 'Guest access, email sign-in, and account basics.'
+date: 2026-10-11
+---
+
+# Sign in & accounts
+
+## Guest vs signed-in
+
+| | Guest | Signed-in |
+|---|--------|-----------|
+| Chat | Limited quota | Full daily limits by plan |
+| Models | Restricted set | Full catalog (per config) |
+| Projects / Build | No | Yes |
+| Memory | No | Yes |
+| Library | Limited | Yes |
+
+## Email sign-in
+
+Scrutium uses **Supabase Auth** for real authentication (not placeholders).
+
+Typical flow:
+
+1. Enter email  
+2. Continue with password or magic link (as enabled)  
+3. Verify if required  
+4. Land in the app and complete age verification if needed  
+
+## Forgot password
+
+Use **Forgot password** on the sign-in screen. Scrutium sends a **reset link** (not a one-time code).
+
+## Profile
+
+Display name and avatar are managed under **Settings → Account**. Preferences (theme, tone, language) live under **Personalization** and related sections.
+
+## Sign out
+
+**Settings** (bottom) → **Sign out**, or the account menu on desktop.

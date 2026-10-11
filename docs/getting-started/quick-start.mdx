@@ -1,62 +1,39 @@
 ---
-title: Quick Start Guide
-description: Learn how to quickly create your own documentation or post.
+title: 'Quick Start'
+description: 'Open Scrutium and send your first message.'
+date: 2026-10-11
 ---
 
-# Quick Start Guide
+# Quick Start
 
-Getting started with your documentation is simple! Just follow this step:
+## 1. Open Scrutium
 
-## Create Your MDX File and Add Metadata
+Go to the live app (your deployed Scrutium URL). You’ll land on the guest or signed-in home with a simple prompt: **Ready when you are**.
 
-Inside your project, navigate to the `docs` folder and create a new `.mdx` file:
+## 2. Sign in (recommended)
 
-```sh
-project-root/docs/YOUR-PAGE-NAME.mdx
-```
+Guests can try a limited number of messages. For full models, Projects, Memory, and Build mode, **sign in with email** (or your configured providers).
 
-At the top of your MDX file, add the following metadata:
+- Open **Sign in** from the header or sidebar.
+- Use **email** for the full login flow (magic link / password as configured).
+- Complete age verification if prompted (required before AI chat for new accounts).
 
-```ts
----
-title: HTTP Server
-description: This section is about HTTP Server.
----
-```
+## 3. Send a message
 
-<div>
-  - **`title`**: Defines the title displayed on the page.
-  <br />- **`description`**: Helps with SEO and improves discoverability.
-</div>
+1. Type in the composer at the bottom.
+2. Optionally pick an **action prompt** (Summary, Code, Design, Research, Learn).
+3. Choose model speed (e.g. Fast) if available.
+4. Send — you’ll see **Thinking for …** with live activity steps, then the answer.
 
-<Note>
-  Use hyphens (`-`) in file names instead of spaces or special characters. The
-  breadcrumb navigation will automatically format hyphens as spaces.
-</Note>
+## 4. Explore the sidebar
 
-## Start Writing
+- **New chat** — start a fresh conversation  
+- **Library** — media, files, and apps  
+- **Projects** — group related chats and builds  
+- **History** — past conversations  
 
-Below the metadata, start writing your documentation using Markdown and MDX. You can include:
+## 5. Optional: turn on Memory
 
-- Regular Markdown content
-- Code blocks
-- React components (if needed)
+**Settings → Memory** — enable memory and add facts (or say “remember that…” in chat). Scrutium will use these in future conversations.
 
-Once your file is created, it will automatically be available in the route and search bar.
-
-<FolderTree className="overflow-hidden p-2">
-  <Folder element="project-root" defaultOpen={true}>
-    <Folder element="docs" defaultOpen={true}>
-      <File>
-        <p>your-page-name.mdx</p>
-      </File>
-    </Folder>
-  </Folder>
-</FolderTree>
-
-## Optional: Add to Sidebar and Table of Contents
-
-If you want your new page to appear in the sidebar and TOC:
-
-- Visit **[docs/customization/sidebar](/docs/customization/sidebar)** to customization the sidebar.
-- Visit **[docs/customization/toc](/docs/customization/toc)** to configure the table of contents.
+You’re ready. See [Chat overview](/docs/chat/overview) for deeper features.
