@@ -19,7 +19,7 @@ When memory is off, Scrutium will not load or save memory facts for your account
 1. **Settings → Memory** — type a fact and add it  
 2. **In chat** — say things like “Remember that I prefer TypeScript” — the model may call the **remember** tool  
 
-Memories are stored in `user_memories` (Supabase) with categories such as identity, preference, project, work, or general.
+Memories are stored on **X-ion servers** (`user_memories`) with categories such as identity, preference, project, work, or general.
 
 ## How it’s used
 
@@ -33,4 +33,4 @@ On each chat request (signed-in, non-Build), Scrutium loads your memories server
 
 ## Privacy
 
-Row-level security ensures you only access your own rows. Memory is account-bound, not shared across users.
+Access policies ensure you only read and write your own rows. Memory is account-bound, not shared across users.
