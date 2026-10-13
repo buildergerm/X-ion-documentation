@@ -6,13 +6,13 @@ date: 2026-10-11
 
 # Self-hosting
 
-The main application lives in the **scrutium-artificial-Intelligence** repository (Next.js App Router + Supabase).
+The main application lives in the **scrutium-artificial-Intelligence** repository (Next.js App Router). Production Scrutium is designed to run against **X-ion servers** for auth, database, and model inference.
 
 ## High-level steps
 
 1. Clone the app repo  
-2. Create a Supabase project  
-3. Run SQL migrations (users, chats, parental, **user_memories**, etc.)  
+2. Point the app at your **X-ion** backend (URL + public and server keys)  
+3. Run SQL migrations (users, chats, parental, **user_memories**, etc.) on the X-ion database  
 4. Set environment variables  
 5. Deploy to Vercel (or any Node host that supports Next.js)  
 
@@ -22,7 +22,11 @@ The main application lives in the **scrutium-artificial-Intelligence** repositor
 
 ## Auth
 
-Configure Supabase Auth (email, redirect URLs for production).
+Configure auth on X-ion servers (email providers, redirect URLs for production).
+
+## Models
+
+Chat and Build traffic is routed through **X-ion model endpoints** — no separate third-party model brand is required in product docs or UI copy.
 
 ## Docs site
 
