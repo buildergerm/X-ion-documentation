@@ -1,12 +1,12 @@
 ---
 title: 'Database migrations'
-description: 'Important Supabase tables for Scrutium features.'
+description: 'Important tables for Scrutium features on X-ion servers.'
 date: 2026-10-11
 ---
 
 # Database migrations
 
-Apply SQL in the Supabase SQL editor (or your migration pipeline) before relying on a feature in production.
+Apply SQL on the **X-ion** database (SQL editor or your migration pipeline) before relying on a feature in production.
 
 ## Memory
 
@@ -26,7 +26,7 @@ ALTER TABLE user_preferences
   ADD COLUMN IF NOT EXISTS memory_enabled BOOLEAN DEFAULT TRUE;
 
 ALTER TABLE user_memories ENABLE ROW LEVEL SECURITY;
--- Add SELECT/INSERT/UPDATE/DELETE policies for auth.uid() = user_id
+-- Add SELECT/INSERT/UPDATE/DELETE policies for the signed-in user id
 ```
 
 ## Age & parental
@@ -35,6 +35,6 @@ Ensure `users` includes age fields (`date_of_birth`, `age_verified_at`, `age_eli
 
 ## Always
 
-- Enable RLS  
+- Enable row-level security  
 - Test with a real signed-in user  
 - Regenerate TypeScript DB types when tables change  
