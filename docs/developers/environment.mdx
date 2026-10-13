@@ -6,25 +6,26 @@ date: 2026-10-11
 
 # Environment variables
 
-Exact names may vary by version; treat this as a checklist.
+Exact names may vary by version; treat this as a checklist. Production deployments talk to **X-ion servers** for auth, data, and models.
 
-## Core
+## X-ion backend (core)
 
-- `NEXT_PUBLIC_SUPABASE_URL`  
-- `NEXT_PUBLIC_SUPABASE_ANON_KEY`  
-- `SUPABASE_SERVICE_ROLE_KEY` (server only)  
+- Public project URL (client)  
+- Public anon / publishable key (client)  
+- Service role / server key (server only — never expose to the browser)  
 
-## Models / providers
+## Models (X-ion)
 
-- Provider API keys as required by your model map (e.g. OpenRouter / Axoid-style keys referenced in chat route)  
+- X-ion model API key(s) and base URL as required by your deployment’s model map  
+- Default model id (e.g. the Fast / default profile shown in the composer)  
 
 ## Search & live tools
 
-- `FIRECRAWL_API_KEY` or `TAVILY_API_KEY` for web search  
+- Web search provider key if enabled for research tools  
 - Live weather / places / crypto often use public endpoints; no key required for basic setups  
 
 ## Optional
 
 - Analytics, email, and connector secrets as you enable features  
 
-Never commit secrets. Use Vercel env or a secrets manager.
+Never commit secrets. Use your host’s env UI or a secrets manager.
