@@ -47,6 +47,15 @@ export const sidebarNav = [
     ],
   },
   {
+    title: 'Prompting Scrutium',
+    icon: <Sparkles className="h-5 w-5" />,
+    defaultOpen: true,
+    pages: [
+      { title: 'How to prompt Scrutium', href: '/docs/chat/how-to-prompt-scrutium' },
+      { title: 'Writing effective prompts', href: '/docs/chat/prompting' },
+    ],
+  },
+  {
     title: 'Chat',
     icon: <MessageSquare className="h-5 w-5" />,
     defaultOpen: true,
@@ -56,7 +65,6 @@ export const sidebarNav = [
       { title: 'Tools & live data', href: '/docs/chat/tools' },
       { title: 'Thinking & activity', href: '/docs/chat/thinking' },
       { title: 'Action prompts', href: '/docs/chat/action-prompts' },
-      { title: 'Writing effective prompts', href: '/docs/chat/prompting' },
     ],
   },
   {
