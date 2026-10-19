@@ -1,6 +1,7 @@
+import type { NextConfig } from 'next';
 import { createContentlayerPlugin } from 'next-contentlayer2';
 
-const nextConfig = {
+const nextConfig: NextConfig = {
   // This documentation site is fully pre-rendered and hosted as static files.
   output: 'export',
   trailingSlash: true,
@@ -9,12 +10,12 @@ const nextConfig = {
     unoptimized: true,
     remotePatterns: [
       {
-        protocol: 'https' as 'https',
+        protocol: 'https',
         hostname: 'avatars.githubusercontent.com',
       },
     ],
   },
-  webpack: (config: { cache: boolean }) => {
+  webpack: (config) => {
     config.cache = false;
     return config;
   },
