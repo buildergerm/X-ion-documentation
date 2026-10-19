@@ -1,5 +1,6 @@
 import {
   BookOpen,
+  Building2,
   Brain,
   FolderKanban,
   Library,
@@ -12,6 +13,17 @@ import {
 } from 'lucide-react';
 
 export const sidebarNav = [
+  {
+    title: 'X-ion Products',
+    icon: <Building2 className="h-5 w-5" />,
+    defaultOpen: true,
+    pages: [
+      { title: 'Product directory', href: '/docs/products/overview' },
+      { title: 'Scrutium AI', href: '/docs/products/scrutium-ai' },
+      { title: 'Draft', href: '/docs/products/draft' },
+      { title: 'Draft integrations', href: '/docs/products/draft-integrations' },
+    ],
+  },
   {
     title: 'Getting Started',
     icon: <Rocket className="h-5 w-5" />,
