@@ -4,6 +4,9 @@
   "private": true,
   "author": "X-ion Team",
   "license": "MIT",
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "bugs": {
     "url": "https://github.com/buildergerm/scrutium-documentation/issues"
   },
