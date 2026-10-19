@@ -4,7 +4,7 @@ This project uses a Next.js static export and deploys the generated `out/` direc
 
 ## Cloudflare Pages settings
 
-- **Repository:** `buildergerm/scrutium-documentation`
+- **Repository:** `buildergerm/X-ion-documentation`
 - **Production branch:** `main`
 - **Framework preset:** Next.js (Static HTML Export)
 - **Build command:** `pnpm build`
