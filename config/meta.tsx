@@ -1,5 +1,7 @@
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://scrutium.vercel.app';
+
 export const meta = {
-  metadataBase: new URL('https://scrutium.vercel.app'),
+  metadataBase: new URL(siteUrl),
   title: 'Scrutium Docs — AI chat, projects, memory & more',
   description:
     'Official documentation for Scrutium AI by X-ion Team. Learn chat, projects, library, memory, safety, and developer setup.',
@@ -38,10 +40,7 @@ export const meta = {
     creator: '@xion',
   },
   alternates: {
-    canonical: 'https://scrutium.vercel.app',
+    canonical: siteUrl,
   },
   robots: 'index, follow',
-  hreflang: {
-    en: 'https://scrutium.vercel.app',
-  },
 };
