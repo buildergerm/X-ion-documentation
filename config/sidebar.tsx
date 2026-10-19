@@ -16,6 +16,15 @@ import {
 
 export const sidebarNav = [
   {
+    title: 'Platform',
+    icon: <Building2 className="h-5 w-5" />,
+    defaultOpen: true,
+    pages: [
+      { title: 'Platform overview', href: '/docs/platform/overview' },
+      { title: 'Product directory', href: '/docs/products/overview' },
+    ],
+  },
+  {
     title: 'X-ion Products',
     icon: <Building2 className="h-5 w-5" />,
     defaultOpen: true,
