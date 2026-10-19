@@ -1,0 +1,4 @@
+# Keep the old middleware redirects working on static hosting.
+# Cloudflare Pages reads this file from the deployed output directory.
+/docs /docs/getting-started/introduction 302
+/docs/getting-started /docs/getting-started/introduction 302
