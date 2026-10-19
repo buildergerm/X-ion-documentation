@@ -3,31 +3,31 @@
 > Documentation for the X-ion Organization product ecosystem, including Scrutium AI, Draft, user guides, integrations, security guidance, and developer resources.
 
 ## Start here
-- [Introduction](https://docs.scrutium.com/docs/getting-started/introduction): Start exploring the documentation.
-- [Platform overview](https://docs.scrutium.com/docs/platform/overview): Understand the product ecosystem.
-- [Product directory](https://docs.scrutium.com/docs/products/overview): Browse documented products.
-- [Troubleshooting](https://docs.scrutium.com/docs/getting-started/troubleshooting): Diagnose common issues.
+- [Introduction](/docs/getting-started/introduction): Start exploring the documentation.
+- [Platform overview](/docs/platform/overview): Understand the product ecosystem.
+- [Product directory](/docs/products/overview): Browse documented products.
+- [Troubleshooting](/docs/getting-started/troubleshooting): Diagnose common issues.
 
 ## Products
-- [Scrutium AI](https://docs.scrutium.com/docs/products/scrutium-ai): AI workspace overview.
-- [Draft](https://docs.scrutium.com/docs/products/draft): Campaign and content workflow overview.
-- [Draft integrations](https://docs.scrutium.com/docs/products/draft-integrations): Integration prerequisites and guidance.
+- [Scrutium AI](/docs/products/scrutium-ai): AI workspace overview.
+- [Draft](/docs/products/draft): Campaign and content workflow overview.
+- [Draft integrations](/docs/products/draft-integrations): Integration prerequisites and guidance.
 
 ## Guides
-- [Writing effective prompts](https://docs.scrutium.com/docs/chat/prompting): Prompting practices.
-- [Research workflows](https://docs.scrutium.com/docs/research/overview): Research planning and source evaluation.
-- [Workspaces and collaboration](https://docs.scrutium.com/docs/workspaces/overview): Organizing work and access.
-- [Account security](https://docs.scrutium.com/docs/account/security): Protecting accounts and credentials.
-- [Privacy and data](https://docs.scrutium.com/docs/account/privacy): Account privacy guidance.
+- [Writing effective prompts](/docs/chat/prompting): Prompting practices.
+- [Research workflows](/docs/research/overview): Research planning and source evaluation.
+- [Workspaces and collaboration](/docs/workspaces/overview): Organizing work and access.
+- [Account security](/docs/account/security): Protecting accounts and credentials.
+- [Privacy and data](/docs/account/privacy): Account privacy guidance.
 
 ## Developers
-- [API integration](https://docs.scrutium.com/docs/developers/api-integration): API setup guidance.
-- [API integration concepts](https://docs.scrutium.com/docs/developers/api-concepts): Common API concepts and security practices.
-- [Environment variables](https://docs.scrutium.com/docs/developers/environment): Deployment configuration checklist.
-- [Errors and debugging](https://docs.scrutium.com/docs/developers/errors-and-debugging): Diagnose integration problems.
+- [API integration](/docs/developers/api-integration): API setup guidance.
+- [API integration concepts](/docs/developers/api-concepts): Common API concepts and security practices.
+- [Environment variables](/docs/developers/environment): Deployment configuration checklist.
+- [Errors and debugging](/docs/developers/errors-and-debugging): Diagnose integration problems.
 
 ## Product updates and policies
-- [Product updates](https://docs.scrutium.com/docs/resources/changelog): Release notes home.
-- [Policies and documentation scope](https://docs.scrutium.com/docs/resources/policies-and-terms): Policy and accuracy guidance.
+- [Product updates](/docs/resources/changelog): Release notes home.
+- [Policies and documentation scope](/docs/resources/policies-and-terms): Policy and accuracy guidance.
 
-The canonical domain in this index should be updated if the documentation site uses a different production hostname. The existence of a link does not imply that every described integration or capability is enabled in every deployment.
+Links are relative to the host serving this index. The existence of a link does not imply that every described integration or capability is enabled in every deployment.
