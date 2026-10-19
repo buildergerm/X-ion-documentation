@@ -1,0 +1,133 @@
+---
+title: 'How to prompt Scrutium'
+description: 'A practical guide to giving Scrutium AI clear instructions, useful context, and criteria for strong results.'
+date: 2026-10-19
+---
+
+# How to prompt Scrutium
+
+Good prompting is less about finding magic words and more about explaining the work you want done. Give Scrutium a clear goal, enough context to understand the situation, and a useful definition of what a successful answer should contain.
+
+You can start with everyday language. Add detail when the task is complex, the requirements are strict, or accuracy matters.
+
+## The five-part prompt
+
+Use this structure as a starting point. You do not need every part for every request.
+
+1. **Goal:** State the outcome you want.
+2. **Context:** Share the background, audience, source material, or current situation.
+3. **Instructions:** Explain the steps or approach you want Scrutium to follow.
+4. **Constraints:** Set boundaries such as length, tone, format, technologies, or exclusions.
+5. **Success criteria:** Say what the final result must include or how it should be checked.
+
+### Example: vague vs. specific
+
+**Vague**
+
+> Help me with my product launch.
+
+**More useful**
+
+> Help me plan the launch of a small software product for first-time users. Create a checklist for the two weeks before launch, launch day, and the week after launch. Include the task, purpose, dependency, and a way to verify completion. Keep the plan practical for a small team and label assumptions instead of presenting them as facts.
+
+The second prompt gives Scrutium a goal, audience, structure, and quality criteria.
+
+## Prompt patterns for common tasks
+
+### Learn or understand a topic
+
+Tell Scrutium what you already know and how you want the explanation presented.
+
+> Explain [topic] to someone who understands [starting point] but is new to [specific concept]. Start with the core idea, use one concrete example, explain common misconceptions, and finish with three questions I can use to check my understanding.
+
+### Write or improve content
+
+Name the audience, purpose, tone, and format. If you have a draft, include it and say what should change—and what should stay.
+
+> Rewrite the text below for [audience] with a [tone] tone. Keep the original meaning and any confirmed facts. Make the message clearer and more concise. Do not add statistics, promises, or claims that are not in the source. Provide the revised version first, followed by a short list of major changes.
+
+### Research a question
+
+State the question, time period, and what evidence would make the answer useful. If current information matters, ask for recent sources and the date checked. Review the underlying sources when citations are available.
+
+> Research [question] using reliable, relevant sources. Focus on information current as of [date or period]. Separate established facts from interpretation, compare meaningful disagreements, cite sources for important claims when available, and list anything you could not verify. End with a concise summary and open questions.
+
+Do not assume a citation alone proves a claim. Open sources and independently verify important findings.
+
+### Plan a project
+
+Give the objective, timeline, resources, dependencies, and definition of done.
+
+> Build a plan to achieve [goal] by [deadline]. Assume [team size/resources]. Break the work into phases and tasks, identify dependencies and risks, and define a measurable completion check for each phase. If key details are missing, list your assumptions and ask only the questions that block a useful plan.
+
+### Work on code or technical problems
+
+Include the language or framework, relevant versions, expected behavior, actual behavior, error output, and constraints. Share only the relevant code or files.
+
+> Help debug this [language/framework] issue. **Expected behavior:** [expected]. **Actual behavior:** [actual]. **Error:** [paste exact error]. Review the provided code, identify the most likely cause, and propose the smallest safe fix. Explain why it works and give commands or tests I can run to verify it. Do not assume files or APIs that are not shown.
+
+Review code and run appropriate tests before deploying. Never include passwords, private keys, access tokens, or production secrets in a prompt.
+
+### Compare options and make a decision
+
+Tell Scrutium which criteria matter and how to handle trade-offs.
+
+> Compare [option A], [option B], and [option C] against these criteria: [criteria]. Use the same criteria for every option. Separate verified information from assumptions, explain trade-offs, identify missing information, and recommend an option only if the evidence supports one.
+
+## Follow-up prompts that improve a result
+
+You rarely need to restart from scratch. Tell Scrutium exactly what to refine:
+
+- **Add depth:** “Expand the section on [topic] with an example and practical steps.”
+- **Be concise:** “Keep the meaning, but reduce this to five key points.”
+- **Check accuracy:** “Review the answer for unsupported claims. Mark uncertainty and tell me what needs verification.”
+- **Change the audience:** “Rewrite this for [audience] without assuming specialist knowledge.”
+- **Change the format:** “Turn this into a checklist with action, owner, and completion criteria.”
+- **Compare against requirements:** “Check the result against each requirement I gave you and list anything missing.”
+- **Clarify uncertainty:** “Separate what is known, what is inferred, and what remains unknown.”
+
+When the answer misses the mark, explain what is wrong, point to the relevant part, and describe the change you want.
+
+## How to prompt for accuracy
+
+For tasks where correctness matters:
+
+- Provide source material or identify the sources that should be prioritized.
+- Ask Scrutium to distinguish facts, estimates, interpretations, and assumptions.
+- Request citations or evidence when appropriate and available.
+- Ask it to flag missing information instead of filling gaps with guesses.
+- Verify important claims against primary or authoritative sources.
+- Treat outputs in legal, medical, financial, security, and other high-impact areas as assistance—not a substitute for qualified professional judgment.
+
+A prompt can improve the process, but it cannot guarantee that every answer will be correct.
+
+## Common prompting mistakes
+
+| Instead of… | Try… |
+| --- | --- |
+| “Make this better.” | Explain whether you want clearer wording, stronger structure, a different tone, or more detail. |
+| Giving no background | Include the audience, purpose, and relevant context. |
+| Combining many unrelated tasks | Break the work into steps and confirm the expected output for each. |
+| Asking for “the best” without criteria | Name the criteria and trade-offs that matter. |
+| Treating assumptions as facts | Ask Scrutium to label assumptions and unknowns. |
+| Accepting a first draft automatically | Review it, test it where possible, and give a specific follow-up. |
+
+## Copy-and-use prompt template
+
+Adapt this template to your task:
+
+> **Goal:** I want to [desired outcome].
+>
+> **Context:** [Relevant background, audience, source material, or current situation.]
+>
+> **Instructions:** [What Scrutium should do and in what order.]
+>
+> **Constraints:** [Length, tone, format, requirements, exclusions, or technical limits.]
+>
+> **Output:** Present the result as [format].
+>
+> **Check before finishing:** Verify [requirements], flag assumptions, and identify anything that remains uncertain.
+
+## Keep it natural
+
+Start with the clearest request you can write, then refine it through conversation. Short prompts work well for simple tasks; complex work benefits from context, constraints, and explicit checks. The aim is not to make every prompt long—it is to make the important details clear.
