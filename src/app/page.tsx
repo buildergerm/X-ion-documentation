@@ -56,6 +56,12 @@ const buildPaths = [
 
 const learningPaths = [
   {
+    title: 'Platform overview',
+    description: 'Understand the products, guides, integrations, and developer resources in one place.',
+    href: '/docs/platform/overview',
+    icon: Compass,
+  },
+  {
     title: 'Get started',
     description: 'Start with the essentials and find your way around the X-ion ecosystem.',
     href: '/docs/getting-started/introduction',
