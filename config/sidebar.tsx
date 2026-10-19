@@ -9,6 +9,9 @@ import {
   Shield,
   Sparkles,
   Code2,
+  Search,
+  Users,
+  ScrollText,
 } from 'lucide-react';
 
 export const sidebarNav = [
@@ -45,6 +48,22 @@ export const sidebarNav = [
       { title: 'Thinking & activity', href: '/docs/chat/thinking' },
       { title: 'Action prompts', href: '/docs/chat/action-prompts' },
       { title: 'Writing effective prompts', href: '/docs/chat/prompting' },
+    ],
+  },
+  {
+    title: 'Research & knowledge',
+    icon: <Search className="h-5 w-5" />,
+    defaultOpen: false,
+    pages: [
+      { title: 'Research workflows', href: '/docs/research/overview' },
+    ],
+  },
+  {
+    title: 'Workspaces & collaboration',
+    icon: <Users className="h-5 w-5" />,
+    defaultOpen: false,
+    pages: [
+      { title: 'Workspaces and collaboration', href: '/docs/workspaces/overview' },
     ],
   },
   {
@@ -101,6 +120,17 @@ export const sidebarNav = [
       { title: 'Environment variables', href: '/docs/developers/environment' },
       { title: 'Database migrations', href: '/docs/developers/migrations' },
       { title: 'API integration', href: '/docs/developers/api-integration' },
+      { title: 'API concepts', href: '/docs/developers/api-concepts' },
+      { title: 'Errors & debugging', href: '/docs/developers/errors-and-debugging' },
+    ],
+  },
+  {
+    title: 'Resources',
+    icon: <ScrollText className="h-5 w-5" />,
+    defaultOpen: false,
+    pages: [
+      { title: 'Product updates', href: '/docs/resources/changelog' },
+      { title: 'Policies & documentation scope', href: '/docs/resources/policies-and-terms' },
     ],
   },
   {
