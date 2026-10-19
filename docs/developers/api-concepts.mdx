@@ -1,0 +1,51 @@
+---
+title: 'API integration concepts'
+description: 'Understand the information needed to connect an application to a documented API safely.'
+date: 2026-10-19
+---
+
+# API integration concepts
+
+This guide introduces the common pieces of an API integration. It is not a substitute for the official API specification. For Scrutium, use the [API Console](https://platform.scrutium.com) as the source of truth for supported endpoints, authentication, request schemas, and response formats.
+
+## Before writing code
+
+Collect these details from the current API documentation:
+
+- Base URL and environment
+- Authentication method and credential format
+- Available endpoints and HTTP methods
+- Required headers and request schemas
+- Response schemas and error formats
+- Rate limits, quotas, and timeout guidance
+- Permission requirements and data-handling rules
+
+Do not infer these details from a different provider or from an illustrative example.
+
+## Keep credentials server-side
+
+Store secret credentials in your deployment's secret manager or server-side environment configuration. Do not embed secrets in browser JavaScript, public repositories, screenshots, client-side bundles, or logs. Use separate credentials for development and production when the provider supports it.
+
+## Handle failures deliberately
+
+A robust client should account for network failures, timeouts, authentication errors, permission errors, validation failures, rate limits, and provider-side errors. Follow the retry instructions in the API specification; do not blindly retry non-idempotent operations.
+
+## Validate inputs and outputs
+
+Validate user input before sending it, handle unexpected responses, and avoid logging sensitive request or response content. Use only the fields and operations documented by the provider.
+
+## Suggested implementation sequence
+
+1. Confirm the official API contract.
+2. Configure a server-side credential.
+3. Make a minimal request in a safe development environment.
+4. Validate successful and unsuccessful responses.
+5. Add timeout, error, and rate-limit handling.
+6. Add tests and operational monitoring.
+7. Review security and data retention before release.
+
+## Related resources
+
+- [API integration guide](/docs/developers/api-integration)
+- [Environment variables](/docs/developers/environment)
+- [Security guidance](/docs/account/security)
