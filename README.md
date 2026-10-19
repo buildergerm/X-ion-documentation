@@ -1,4 +1,6 @@
-# Scrutium Documentation
+# X-ion Draft & Scrutium Documentation
+
+This docs covers full ducumentation of X-ion Organization products documentation.
 
 Official product documentation for **Scrutium AI** — chat, research, and build with privacy by default. Built by **X-ion Team**.
 
