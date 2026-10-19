@@ -22,7 +22,7 @@ import {
   UserAvatar,
   NestedLink,
 } from '@/components/sidebar';
-import { Github } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
 import Header from '@/components/header';
 import { ModeToggle } from '@/components/mode-toggle';
@@ -115,12 +115,15 @@ export default function DocsLayout({
               <Button
                 onClick={() =>
                   window.open(
-                    'https://github.com/buildergerm/X-ion-documentation',
-                    '_blank'
+                    'https://platform.scrutium.com',
+                    '_blank',
+                    'noopener,noreferrer'
                   )
                 }
+                className="gap-2"
               >
-                <Github className="h-[1.2rem] w-[1.2rem] transition-all" />
+                <span>API Console</span>
+                <ExternalLink className="h-4 w-4" />
               </Button>
             </div>
           </Header>
