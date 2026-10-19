@@ -14,12 +14,12 @@ Product documentation evolves with each product. Where a provider requires OAuth
 
 ## Explore the documentation
 
-- [Product directory](/docs/products/overview)
-- [Scrutium AI](/docs/products/scrutium-ai)
-- [Draft](/docs/products/draft)
-- [Draft integrations](/docs/products/draft-integrations)
-- [Getting started](/docs/getting-started/introduction)
-- [Developer documentation](/docs/developers/environment)
+- [Product directory](docs/products/overview.mdx)
+- [Scrutium AI](docs/products/scrutium-ai.mdx)
+- [Draft](docs/products/draft.mdx)
+- [Draft integrations](docs/products/draft-integrations.mdx)
+- [Getting started](docs/getting-started/introduction.mdx)
+- [Developer documentation](docs/developers/environment.mdx)
 
 ## Technology
 
