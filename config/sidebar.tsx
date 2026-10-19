@@ -6,7 +6,6 @@ import {
   Library,
   MessageSquare,
   Rocket,
-  Settings,
   Shield,
   Sparkles,
   Code2,
@@ -29,18 +28,10 @@ export const sidebarNav = [
     icon: <Rocket className="h-5 w-5" />,
     defaultOpen: true,
     pages: [
-      {
-        title: 'Introduction',
-        href: '/docs/getting-started/introduction',
-      },
-      {
-        title: 'Quick Start',
-        href: '/docs/getting-started/quick-start',
-      },
-      {
-        title: 'Sign in & accounts',
-        href: '/docs/getting-started/accounts',
-      },
+      { title: 'Introduction', href: '/docs/getting-started/introduction' },
+      { title: 'Quick Start', href: '/docs/getting-started/quick-start' },
+      { title: 'Sign in & accounts', href: '/docs/getting-started/accounts' },
+      { title: 'Troubleshooting', href: '/docs/getting-started/troubleshooting' },
     ],
   },
   {
@@ -48,26 +39,12 @@ export const sidebarNav = [
     icon: <MessageSquare className="h-5 w-5" />,
     defaultOpen: true,
     pages: [
-      {
-        title: 'Overview',
-        href: '/docs/chat/overview',
-      },
-      {
-        title: 'Models & speed',
-        href: '/docs/chat/models',
-      },
-      {
-        title: 'Tools & live data',
-        href: '/docs/chat/tools',
-      },
-      {
-        title: 'Thinking & activity',
-        href: '/docs/chat/thinking',
-      },
-      {
-        title: 'Action prompts',
-        href: '/docs/chat/action-prompts',
-      },
+      { title: 'Overview', href: '/docs/chat/overview' },
+      { title: 'Models & speed', href: '/docs/chat/models' },
+      { title: 'Tools & live data', href: '/docs/chat/tools' },
+      { title: 'Thinking & activity', href: '/docs/chat/thinking' },
+      { title: 'Action prompts', href: '/docs/chat/action-prompts' },
+      { title: 'Writing effective prompts', href: '/docs/chat/prompting' },
     ],
   },
   {
@@ -75,14 +52,8 @@ export const sidebarNav = [
     icon: <FolderKanban className="h-5 w-5" />,
     defaultOpen: true,
     pages: [
-      {
-        title: 'Projects',
-        href: '/docs/projects/overview',
-      },
-      {
-        title: 'Build mode',
-        href: '/docs/projects/build-mode',
-      },
+      { title: 'Projects', href: '/docs/projects/overview' },
+      { title: 'Build mode', href: '/docs/projects/build-mode' },
     ],
   },
   {
@@ -90,10 +61,7 @@ export const sidebarNav = [
     icon: <Library className="h-5 w-5" />,
     defaultOpen: true,
     pages: [
-      {
-        title: 'Your library',
-        href: '/docs/library/overview',
-      },
+      { title: 'Your library', href: '/docs/library/overview' },
     ],
   },
   {
@@ -101,10 +69,7 @@ export const sidebarNav = [
     icon: <Brain className="h-5 w-5" />,
     defaultOpen: true,
     pages: [
-      {
-        title: 'How memory works',
-        href: '/docs/memory/overview',
-      },
+      { title: 'How memory works', href: '/docs/memory/overview' },
     ],
   },
   {
@@ -112,22 +77,11 @@ export const sidebarNav = [
     icon: <Shield className="h-5 w-5" />,
     defaultOpen: true,
     pages: [
-      {
-        title: 'Age verification',
-        href: '/docs/account/age-verification',
-      },
-      {
-        title: 'Parental controls',
-        href: '/docs/account/parental-controls',
-      },
-      {
-        title: 'Settings',
-        href: '/docs/account/settings',
-      },
-      {
-        title: 'Privacy & data',
-        href: '/docs/account/privacy',
-      },
+      { title: 'Age verification', href: '/docs/account/age-verification' },
+      { title: 'Parental controls', href: '/docs/account/parental-controls' },
+      { title: 'Settings', href: '/docs/account/settings' },
+      { title: 'Privacy & data', href: '/docs/account/privacy' },
+      { title: 'Account security', href: '/docs/account/security' },
     ],
   },
   {
@@ -135,10 +89,7 @@ export const sidebarNav = [
     icon: <Sparkles className="h-5 w-5" />,
     defaultOpen: false,
     pages: [
-      {
-        title: 'Preferences',
-        href: '/docs/personalization/preferences',
-      },
+      { title: 'Preferences', href: '/docs/personalization/preferences' },
     ],
   },
   {
@@ -146,18 +97,10 @@ export const sidebarNav = [
     icon: <Code2 className="h-5 w-5" />,
     defaultOpen: false,
     pages: [
-      {
-        title: 'Self-hosting',
-        href: '/docs/developers/self-hosting',
-      },
-      {
-        title: 'Environment variables',
-        href: '/docs/developers/environment',
-      },
-      {
-        title: 'Database migrations',
-        href: '/docs/developers/migrations',
-      },
+      { title: 'Self-hosting', href: '/docs/developers/self-hosting' },
+      { title: 'Environment variables', href: '/docs/developers/environment' },
+      { title: 'Database migrations', href: '/docs/developers/migrations' },
+      { title: 'API integration', href: '/docs/developers/api-integration' },
     ],
   },
   {
@@ -165,10 +108,7 @@ export const sidebarNav = [
     icon: <BookOpen className="h-5 w-5" />,
     defaultOpen: false,
     pages: [
-      {
-        title: 'X-ion Team',
-        href: '/docs/about/x-ion',
-      },
+      { title: 'X-ion Team', href: '/docs/about/x-ion' },
     ],
   },
 ];
