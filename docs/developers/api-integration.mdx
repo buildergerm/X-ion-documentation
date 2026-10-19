@@ -1,0 +1,86 @@
+---
+title: 'API Integration'
+description: 'Connect applications to Scrutium using the API details published in the API Console.'
+date: 2026-10-19
+---
+
+# API Integration
+
+Use this guide to prepare an application to integrate with Scrutium. **The API Console is the source of truth** for the current API base URL, available endpoints, authentication method, permissions, and request/response schemas.
+
+[Open the Scrutium API Console](https://platform.scrutium.com)
+
+## Before you begin
+
+- Access to the Scrutium platform and permission to manage API access for your account or workspace.
+- The API base URL and endpoint documentation shown by the API Console.
+- An API credential created or issued through the Console, if the Console provides credentials for your account.
+- A server-side environment in which to store credentials securely.
+
+The API surface and available permissions depend on what is enabled for your account. Do not assume an endpoint, permission, or authentication scheme that is not shown in the Console.
+
+## 1. Confirm API availability
+
+1. Open the [API Console](https://platform.scrutium.com).
+2. Sign in using an account authorized to access API settings.
+3. Review the APIs and operations available to your account.
+4. Read the published authentication instructions, required permissions, rate limits, and request schemas before making a request.
+5. If API access, credentials, or an endpoint is not available in the Console, contact the Scrutium team before building against it.
+
+## 2. Configure your application
+
+Keep credentials on a trusted server. Do not embed secret API credentials in browser JavaScript, mobile application bundles, public repositories, or client-side environment variables.
+
+For a server-side application, configure the exact values provided by the Console as environment variables. The names below are local configuration names only; they are not Scrutium-issued values.
+
+```dotenv
+SCRUTIUM_API_BASE_URL=
+SCRUTIUM_API_KEY=
+```
+
+- Set `SCRUTIUM_API_BASE_URL` to the base URL explicitly published by the API Console.
+- Set `SCRUTIUM_API_KEY` only if the Console's documented authentication flow issues an API key. If it specifies another authentication method, follow that method instead.
+- Keep the values in your deployment's secret manager or environment configuration. Do not commit populated secrets to source control.
+
+Do not fill these values with guessed URLs or credentials.
+
+## 3. Make a request using the documented contract
+
+Use the HTTP method, endpoint path, headers, parameters, and body schema specified for the operation in the API Console. The following is a configuration checklist, not a runnable API request:
+
+- **Base URL:** copy it from the Console.
+- **Path and HTTP method:** select a documented operation.
+- **Authentication:** follow the exact scheme documented for that operation.
+- **Payload:** send only fields allowed by the published request schema.
+- **Response handling:** validate the documented response shape and handle error responses.
+
+No endpoint path, authorization header, request body, or response example is supplied here because a public Scrutium API contract was not found in the application repository at the time this guide was written. Invented examples could accidentally direct you to an unsupported endpoint or an unsafe authentication pattern.
+
+## 4. Handle credentials safely
+
+- Grant only the minimum permissions required for the integration.
+- Keep credentials server-side and out of logs, analytics events, URLs, and error messages.
+- Rotate or revoke a credential promptly if it may have been exposed.
+- Use separate credentials for development and production when the Console supports them.
+- Never share an API key in support requests or screenshots.
+- Follow the Console's guidance for expiration, rotation, and revocation.
+
+## 5. Test and troubleshoot
+
+Test against the environment and operations explicitly supported by the Console. Start with a low-impact request documented by Scrutium, then verify success and error handling before enabling production traffic.
+
+When a request fails, check:
+
+1. The base URL and endpoint path match the Console exactly.
+2. The HTTP method and required parameters match the operation's schema.
+3. The credential is active and has the required permissions.
+4. The request uses the documented authentication format.
+5. The request body uses the expected content type and schema.
+6. You have not exceeded the documented rate limits.
+7. The service status and error details indicate no current outage or access restriction.
+
+Do not retry requests indefinitely. Use the retry and rate-limit guidance published for the specific API operation.
+
+## API reference and support
+
+For the current API reference, supported operations, credentials, permissions, and any SDK or webhook instructions, start at the [Scrutium API Console](https://platform.scrutium.com). This guide intentionally does not publish unverified endpoint details.
