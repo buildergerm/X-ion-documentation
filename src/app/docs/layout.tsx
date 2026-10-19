@@ -49,17 +49,17 @@ export default function DocsLayout({
             <SidebarHeaderLogo
               logo={
                 <Image
-                  alt="Scrutium"
-                  className="h-auto w-auto dark:invert"
+                  alt="X-ion Docs"
+                  className="h-10 w-10 object-contain"
                   width={40}
                   height={40}
-                  src="/logos/pinedocs.png"
+                  src="/logos/logo.png"
                 />
               }
             />
 
             <Link href="/" className="flex flex-1 gap-3">
-              <SidebarHeaderTitle>Scrutium</SidebarHeaderTitle>
+              <SidebarHeaderTitle className="text-2xl">X-ion Docs</SidebarHeaderTitle>
             </Link>
           </SidebarHeader>
           <SidebarContent>
@@ -85,7 +85,7 @@ export default function DocsLayout({
               {
                 <Image
                   alt="X-ion"
-                  src="/logos/pinedocs.png"
+                  src="/logos/logo.png"
                   width={40}
                   height={40}
                   className="dark:invert"
@@ -97,7 +97,7 @@ export default function DocsLayout({
                 X-ion Team
               </span>
               <span className="text-xs text-gray-500 dark:text-gray-400">
-                Scrutium Docs
+                X-ion Docs
               </span>
             </div>
           </SidebarFooter>
