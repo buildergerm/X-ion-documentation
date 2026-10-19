@@ -1,0 +1,65 @@
+---
+title: 'Account security'
+description: 'Practical steps for protecting your X-ion product account and connected services.'
+date: 2026-10-19
+---
+
+# Account security
+
+Protecting an account is a shared responsibility between the product, the account holder, and any organization that manages access. These recommendations apply broadly across X-ion products; available security controls can vary by deployment.
+
+## Protect your sign-in
+
+- Use a unique, strong password when password-based sign-in is available.
+- Use multi-factor authentication if the product or identity provider offers it.
+- Never share one-time codes, recovery codes, passwords, or sign-in links.
+- Sign in only through the official product URL.
+- Lock your device when you step away and keep your browser and operating system updated.
+
+If you suspect someone else has accessed your account, use the available account-security controls to secure it and contact your administrator or official support channel.
+
+## Review connected applications
+
+Before connecting a third-party service:
+
+1. Confirm the provider and destination account are correct.
+2. Read the permissions being requested.
+3. Grant access only to accounts and resources you are authorized to manage.
+4. Avoid granting broader permissions than the task requires.
+5. Revisit connected applications periodically and revoke access that is no longer needed.
+
+Revoking a provider connection can interrupt workflows that depend on it. Check the impact before removing access.
+
+## Handle data carefully
+
+- Share only the information needed for the task.
+- Follow your organization's rules for confidential, personal, customer, and regulated data.
+- Redact sensitive information before submitting bug reports or screenshots.
+- Do not place API keys, passwords, tokens, private keys, or OAuth client secrets in prompts, documents, public issues, or source control.
+- Use approved secret-management facilities for application credentials.
+
+## If you suspect compromise
+
+1. Stop sharing additional information with the suspected attacker.
+2. Change the affected password using the official identity provider, if applicable.
+3. Revoke suspicious sessions or connected applications using available controls.
+4. Notify your organization administrator or official support channel.
+5. Review recent activity and rotate exposed credentials through the relevant provider.
+6. Preserve relevant timestamps and error messages, but do not distribute secrets in the incident report.
+
+If a secret was committed to a repository, deleting it from the latest file is not sufficient. Revoke or rotate it first; then follow your repository host's guidance for removing exposed secret material from history where necessary.
+
+## Administrators and developers
+
+- Apply least-privilege access to users, service accounts, and integrations.
+- Keep production credentials separate from development and test credentials.
+- Review permissions when roles or responsibilities change.
+- Keep dependencies patched and review deployment logs for unexpected behavior.
+- Do not assume a feature is enabled or a security control is enforced unless the deployment configuration and product behavior confirm it.
+
+## Related guidance
+
+- [Privacy & data](/docs/account/privacy)
+- [Account settings](/docs/account/settings)
+- [Environment variables](/docs/developers/environment)
+- [API integration](/docs/developers/api-integration)
