@@ -91,6 +91,24 @@ const learningPaths = [
     href: '/docs/products/overview',
     icon: BookOpen,
   },
+  {
+    title: 'Research workflows',
+    description: 'Plan research, evaluate evidence, and organize findings responsibly.',
+    href: '/docs/research/overview',
+    icon: Search,
+  },
+  {
+    title: 'Workspaces and collaboration',
+    description: 'Organize work clearly and manage access to shared material.',
+    href: '/docs/workspaces/overview',
+    icon: Layers3,
+  },
+  {
+    title: 'Product updates',
+    description: 'Find release notes and changes verified by the X-ion team.',
+    href: '/docs/resources/changelog',
+    icon: Sparkles,
+  },
 ];
 
 export default function Home() {
