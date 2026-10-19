@@ -1,0 +1,58 @@
+---
+title: 'Errors and debugging'
+description: 'A repeatable process for diagnosing integration, configuration, and runtime issues.'
+date: 2026-10-19
+---
+
+# Errors and debugging
+
+Use this guide to investigate problems in an X-ion deployment or an integration. Exact error codes and troubleshooting steps depend on the affected product and service.
+
+## Gather the right context
+
+Before changing configuration, record:
+
+- The action you were trying to complete
+- The approximate time and environment
+- The full error message and any documented error code
+- Whether the issue affects one account or multiple users
+- Recent deployment or configuration changes
+- Relevant request IDs, if the service provides them
+
+Remove secrets, access tokens, personal information, and sensitive payloads before sharing diagnostic output.
+
+## Check the common causes
+
+### Authentication or permission failures
+
+Confirm that the credential is present, current, intended for the correct environment, and authorized for the requested action. Never paste the secret itself into an issue or support request.
+
+### Configuration failures
+
+Check variable names against the actual deployment documentation, confirm that required values are set in the correct environment, and restart or redeploy if the platform requires it for configuration changes.
+
+### Network and timeout failures
+
+Check connectivity, DNS, outbound network rules, provider status, and timeout settings. Use the retry behavior specified by the service rather than retrying indefinitely.
+
+### Validation failures
+
+Compare the request with the current schema. Check required fields, data types, allowed values, and content limits.
+
+### Rate limits
+
+Follow the provider's rate-limit headers and retry guidance where available. Use bounded backoff and avoid creating duplicate operations.
+
+## Safe debugging practices
+
+- Reproduce the issue in a non-production environment when possible.
+- Prefer minimal test cases.
+- Redact secrets and personal data from logs.
+- Avoid disabling security controls to make a test pass.
+- Document the fix and add a regression test when appropriate.
+
+## Related guides
+
+- [Environment variables](/docs/developers/environment)
+- [API integration concepts](/docs/developers/api-concepts)
+- [Troubleshooting](/docs/getting-started/troubleshooting)
