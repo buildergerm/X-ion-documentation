@@ -1,0 +1,76 @@
+---
+title: 'Writing effective prompts'
+description: 'Get clearer, more useful results from Scrutium AI with better instructions.'
+date: 2026-10-19
+---
+
+# Writing effective prompts
+
+A useful prompt explains what you want to accomplish, the context the AI needs, and what a good result should look like. You do not need special syntax: plain language is a good place to start.
+
+## A simple prompt structure
+
+Try including these elements when they matter:
+
+1. **Goal:** What should be done?
+2. **Context:** What background or source material should be considered?
+3. **Constraints:** What must be included, avoided, or preserved?
+4. **Output:** Should the result be a checklist, explanation, table, draft, plan, or code?
+5. **Quality check:** What should the response verify before finishing?
+
+For example:
+
+> Help me prepare a launch checklist for a small software product. Organize it by two weeks before launch, launch day, and the week after launch. Include owners, dependencies, and a final verification step. Mark assumptions clearly.
+
+## Give the model the right context
+
+- Share relevant excerpts, requirements, or examples instead of relying on unstated background.
+- Identify the intended audience and their level of familiarity with the topic.
+- Explain which source should take priority when materials disagree.
+- Separate confirmed facts from assumptions and open questions.
+- For code tasks, include the relevant file, error output, expected behavior, and constraints.
+
+Do not include passwords, private keys, access tokens, or sensitive information that is not needed for the task.
+
+## Improve results through iteration
+
+You can refine a first response with targeted follow-ups:
+
+- “Keep the structure, but make the explanation shorter.”
+- “List the assumptions and identify which need verification.”
+- “Compare these options against the requirements I gave you.”
+- “Review the draft for unsupported claims and flag them.”
+- “Ask me only for the missing information that blocks progress.”
+
+When a result is not right, explain what is wrong and what should change. A specific correction is usually more useful than simply asking for a better answer.
+
+## Research and current information
+
+When a task depends on current facts, ask for recent sources and the date the information was checked. Review citations and open the underlying source when available. Search results and citations can still be incomplete or misleading; verify consequential claims independently.
+
+For high-impact decisions involving health, law, finances, safety, or security, treat AI output as assistance rather than a substitute for qualified judgment.
+
+## Code and technical work
+
+For technical tasks, state:
+- The language, framework, and relevant versions
+- The desired behavior and current behavior
+- The exact error or failing test
+- Files or APIs that must not change
+- Security, performance, and compatibility constraints
+
+Ask for a clear explanation of changes and validation steps. Review generated code before deploying it, and never paste production secrets into a prompt.
+
+## A reusable template
+
+> **Goal:** [What I need]
+>
+> **Context:** [Relevant background or source material]
+>
+> **Constraints:** [Requirements, exclusions, and limits]
+>
+> **Output format:** [How the answer should be organized]
+>
+> **Verify:** [What should be checked, cited, tested, or called out as uncertain]
+
+Use only the sections that help your task. A short, specific question is often better than a long prompt with unnecessary detail.
