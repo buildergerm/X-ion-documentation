@@ -1,0 +1,57 @@
+---
+title: 'Draft Integrations'
+description: 'Integration categories, prerequisites, and troubleshooting guidance for Draft.'
+date: 2026-10-19
+---
+
+# Draft Integrations
+
+Draft can connect to third-party services to support publishing, commerce, collaboration, and analytics workflows. The available providers and actions depend on the Draft deployment, provider APIs, account permissions, and configured credentials.
+
+## Integration directory
+
+| Provider | Category | Common purpose |
+| --- | --- | --- |
+| Meta Business | Social and business tools | Manage authorized Meta business assets where supported |
+| Facebook Pages | Social publishing | Work with Pages the connected account is allowed to manage |
+| LinkedIn | Professional social | Connect an authorized LinkedIn account or organization where supported |
+| X | Social publishing | Connect an authorized X account for supported workflows |
+| TikTok | Video and social | Connect a TikTok account for available supported actions |
+| YouTube | Video publishing | Connect an authorized YouTube channel where supported |
+| Pinterest | Visual discovery | Connect an authorized Pinterest account for supported workflows |
+| Shopify | Commerce | Connect a store for the commerce features enabled in Draft |
+| Slack | Collaboration | Connect a workspace for supported collaboration notifications or workflows |
+| Google Analytics 4 | Analytics | Connect an authorized analytics property for available reporting |
+
+This table describes integration categories, not a guarantee that every provider action is enabled in every environment. Check Draft's current Integrations page for the providers and permissions actually available to your account.
+
+## General connection steps
+
+1. Open **Integrations** in Draft.
+2. Choose the provider and select its connection or management action.
+3. Review the prerequisites shown in Draft. Depending on the provider, you may need an administrator role, an eligible account, OAuth approval, API credentials, or an enabled provider application.
+4. Continue to the provider's official authorization screen if prompted.
+5. Review requested scopes and approve only if they match the task and your organization's policy.
+6. Return to Draft and verify that the integration shows a connected or healthy status.
+7. Test with a low-risk action before relying on the integration in a live campaign.
+
+Use the exact steps displayed in your Draft environment. Provider interfaces and API requirements change over time.
+
+## Troubleshooting
+
+- **Provider missing:** check whether it is enabled for your deployment and account.
+- **Authorization denied:** confirm that you are using the correct provider account and have the required role.
+- **Connection expires:** reconnect through Draft and review whether the provider revoked access or requires renewed consent.
+- **Missing assets:** verify that the authorized account can access the Page, channel, store, workspace, or analytics property.
+- **Action fails after connection:** inspect the error in Draft, confirm provider-side permissions and content requirements, and retry only after correcting the cause.
+- **Analytics data is absent:** verify the selected GA4 property, access level, date range, and reporting configuration.
+
+## Security checklist
+
+- Never commit secrets or tokens to source control.
+- Use provider-approved authorization flows and secure secret storage.
+- Request the minimum permissions needed.
+- Disconnect integrations when access is no longer needed.
+- Do not include private customer data in bug reports.
+
+For provider-specific API requirements, consult the provider's official developer documentation and the setup information shown in your Draft deployment.
