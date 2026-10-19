@@ -1,0 +1,78 @@
+---
+title: 'Troubleshooting'
+description: 'Diagnose common sign-in, chat, project, and integration problems.'
+date: 2026-10-19
+---
+
+# Troubleshooting
+
+Use this guide to narrow down common problems in X-ion products. The exact controls available depend on the product and deployment you use.
+
+## Start with the basics
+
+1. Refresh the page once and retry the action.
+2. Check whether your internet connection is stable.
+3. Confirm that you are signed into the intended account and workspace.
+4. If the problem involves an external provider, check that provider's service status and account permissions.
+5. Note the approximate time, product area, action attempted, and exact error text.
+
+Do not repeatedly submit payments, publish actions, campaign launches, or other operations that could create duplicates. First check whether the original action completed.
+
+## Sign-in and account access
+
+- Confirm you are using the official product URL supplied by X-ion or your administrator.
+- Check that your browser permits the cookies and redirects required by the configured sign-in method.
+- If a sign-in link has expired, request a new one rather than reusing an old link.
+- If access was recently granted or revoked, ask your workspace administrator to verify your account and role.
+
+Never share a password, one-time code, recovery code, session cookie, or authentication token with support.
+
+## Chat and AI responses
+
+If a conversation does not load or a response stalls:
+
+1. Wait briefly to see whether the request finishes.
+2. Retry with a shorter prompt if the input is unusually long.
+3. Start a new conversation to determine whether the issue is isolated to one thread.
+4. If tools or live data are involved, retry without the optional tool to isolate the source of the failure.
+5. Record any visible request identifier or error message, if provided.
+
+AI responses can be incomplete or incorrect. Verify important facts, calculations, citations, and time-sensitive information before relying on them.
+
+## Projects, files, and saved work
+
+- Confirm you are in the correct account and project.
+- Check whether the upload finished and whether the file type and size are supported by your deployment.
+- Refresh the project view before uploading the same file again.
+- If saved work is missing, check filters, project selection, and account identity before assuming it was deleted.
+
+Do not upload confidential or regulated data unless your organization's policies and the product's approved data handling arrangements permit it.
+
+## Draft and external integrations
+
+When a connection or publishing action fails:
+
+1. Confirm the provider account is the intended account and has permission to manage the destination.
+2. Review the permissions requested by the integration.
+3. Check whether an administrator must approve access or configure provider credentials.
+4. Reconnect only when it is safe to do so; avoid revoking access before recording the visible error.
+5. Verify the campaign or post status in both Draft and the provider when possible.
+
+A successful connection does not necessarily mean every provider feature is available. Publishing, analytics, and scheduling can have separate permissions and configuration requirements.
+
+## What to include in a support report
+
+Provide:
+- Product and page where the problem occurred
+- Steps that reproduce the issue
+- Expected result and actual result
+- Exact error text, with secrets removed
+- Approximate date, time, and timezone
+- Browser and operating system, when relevant
+- Whether the issue affects one account or multiple users
+
+**Never include** passwords, API keys, OAuth secrets, access tokens, private keys, session cookies, or unredacted personal data.
+
+## Still stuck?
+
+Use the official support or feedback channel provided by your product deployment or organization administrator. Include the details above so the team can investigate without exposing sensitive information.
