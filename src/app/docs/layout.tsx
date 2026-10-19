@@ -115,7 +115,7 @@ export default function DocsLayout({
               <Button
                 onClick={() =>
                   window.open(
-                    'https://github.com/buildergerm/scrutium-artificial-Intelligence',
+                    'https://github.com/buildergerm/X-ion-documentation',
                     '_blank'
                   )
                 }
