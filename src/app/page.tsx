@@ -13,7 +13,7 @@ export default function Home() {
     <div className="flex min-h-screen flex-col bg-white text-gray-900 dark:bg-gray-950 dark:text-white">
       <header className="sticky top-0 z-10 border-b border-gray-200 bg-white/90 backdrop-blur-sm dark:border-gray-800 dark:bg-gray-950/90">
         <div className="container mx-auto flex items-center justify-between px-4 py-2">
-          <div className="text-sm font-semibold tracking-tight">Scrutium Docs</div>
+          <div className="text-sm font-semibold tracking-tight">X-ion Docs</div>
           <div className="flex items-center gap-2">
             <ModeToggle />
             <Button
@@ -39,20 +39,19 @@ export default function Home() {
         >
           <div className="mb-6 flex items-center gap-3">
             <Image
-              alt="Scrutium"
-              className="h-14 w-14 dark:invert"
+              alt="X-ion Docs"
+              className="h-14 w-14 object-contain"
               width={56}
               height={56}
-              src="/logos/pinedocs.png"
+              src="/logos/logo.png"
             />
             <h1 className="text-5xl font-semibold tracking-tight md:text-6xl">
-              Scrutium
+              X-ion Docs
             </h1>
           </div>
 
           <p className="max-w-xl text-lg text-gray-600 dark:text-gray-300">
-            Official docs for Scrutium AI — chat, research, and build with
-            privacy by default. Built by X-ion Team.
+            Official documentation for X-ion products, platforms, and developer tools.
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-3">
@@ -79,18 +78,18 @@ export default function Home() {
           <div className="mt-14 grid w-full gap-4 text-left sm:grid-cols-3">
             {[
               {
-                title: 'Chat & tools',
-                body: 'Streaming answers, live tools, and a clear thinking UI.',
+                title: 'Products & tools',
+                body: 'Explore X-ion products, capabilities, and workflows.',
                 href: '/docs/chat/overview',
               },
               {
-                title: 'Projects & Build',
-                body: 'Organize work and generate apps in Build mode.',
+                title: 'Guides & workflows',
+                body: 'Follow practical guides to get started and work efficiently.',
                 href: '/docs/projects/overview',
               },
               {
-                title: 'Memory',
-                body: 'Durable facts across chats — under your control.',
+                title: 'Developer resources',
+                body: 'Find setup guidance and technical documentation.',
                 href: '/docs/memory/overview',
               },
             ].map((card) => (
