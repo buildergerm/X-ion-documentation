@@ -1,5 +1,5 @@
 {
-  "name": "scrutium-documentation",
+  "name": "x-ion-documentation",
   "version": "1.0.0",
   "private": true,
   "author": "X-ion Team",
@@ -8,7 +8,7 @@
     "node": ">=20.9.0"
   },
   "bugs": {
-    "url": "https://github.com/buildergerm/scrutium-documentation/issues"
+    "url": "https://github.com/buildergerm/X-ion-documentation/issues"
   },
   "scripts": {
     "dev": "next dev",
@@ -26,9 +26,10 @@
     ]
   },
   "keywords": [
-    "scrutium",
-    "scrutium-ai",
     "x-ion",
+    "x-ion-organization",
+    "scrutium-ai",
+    "draft",
     "documentation",
     "nextjs",
     "mdx"
