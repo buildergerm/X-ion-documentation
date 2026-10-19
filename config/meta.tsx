@@ -7,6 +7,9 @@ export const meta = {
     'Official documentation for X-ion products, platforms, features, and developer tools.',
   authors: [{ name: 'X-ion Team' }],
   keywords: [
+    'X-ion Organization',
+    'X-ion Docs',
+    'Draft',
     'Scrutium',
     'Scrutium AI',
     'X-ion',
@@ -33,9 +36,9 @@ export const meta = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Scrutium Docs',
+    title: 'X-ion Docs',
     description:
-      'Official documentation for Scrutium AI — private by default, built by X-ion.',
+      'Official documentation for X-ion Organization products, including Scrutium AI and Draft.',
     images: ['/og_image.png'],
     creator: '@xion',
   },
